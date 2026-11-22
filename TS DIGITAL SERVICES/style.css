@@ -1,6 +1,7 @@
+
 /* =====================================
    TS DIGITAL SERVICES
-   Professional Chrome & Electric Blue UI
+   Chrome & Electric Blue UI
 ===================================== */
 
 :root {
@@ -29,7 +30,8 @@
     --radius-md: 14px;
 }
 
-/* RESET & BASE */
+/* RESET */
+
 *,
 *::before,
 *::after {
@@ -61,9 +63,8 @@ main {
     z-index: 2;
 }
 
-/* =====================================
-   AMBIENT BACKDROP & MOTION
-===================================== */
+/* BACKGROUND */
+
 .bg-stage {
     position: fixed;
     inset: 0;
@@ -119,20 +120,13 @@ main {
 }
 
 @keyframes ambientDrift {
-    0% {
-        transform: translate3d(0, 0, 0) scale(1);
-    }
-    50% {
-        transform: translate3d(32px, 24px, 0) scale(1.05);
-    }
-    100% {
-        transform: translate3d(-20px, 42px, 0) scale(0.97);
-    }
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(32px, 24px, 0) scale(1.05); }
+    100% { transform: translate3d(-20px, 42px, 0) scale(0.97); }
 }
 
-/* =====================================
-   HEADER & STANDALONE LOGO.PNG
-===================================== */
+/* HEADER */
+
 .header {
     position: sticky;
     top: 0;
@@ -163,9 +157,8 @@ main {
 .brand-logo {
     height: 56px;
     width: auto;
-    max-width: 110px;
+    max-width: 220px;
     object-fit: contain;
-    border-radius: 10px;
     filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.28));
     transition: transform 0.35s var(--ease-pro), filter 0.35s var(--ease-pro);
 }
@@ -200,19 +193,12 @@ main {
 }
 
 @keyframes gentlePulse {
-    0%, 100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.65;
-        transform: scale(1.15);
-    }
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.65; transform: scale(1.15); }
 }
 
-/* =====================================
-   HERO SECTION
-===================================== */
+/* HERO */
+
 .hero {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -301,9 +287,8 @@ main {
     font-weight: 700;
 }
 
-/* =====================================
-   REFINED PROFESSIONAL ENTRANCE
-===================================== */
+/* REVEAL ANIMATIONS */
+
 .reveal-item {
     opacity: 0;
     transform: translate3d(0, 16px, 0);
@@ -318,13 +303,12 @@ main {
     }
 }
 
-/* =====================================
-   SERVICES SECTION & CARDS
-===================================== */
+/* SERVICES */
+
 .services-section {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 1.75rem 1.5rem 6rem;
+    padding: 1.75rem 1.5rem 5rem;
 }
 
 .section-heading {
@@ -394,11 +378,12 @@ main {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.6rem;
 }
 
-/* SERVICE CARD */
+/* SERVICE CARDS */
+
 .service-card {
     --pointer-x: 50%;
     --pointer-y: 50%;
@@ -425,7 +410,6 @@ main {
         box-shadow 0.35s var(--ease-pro);
 }
 
-/* Subtle Pointer Sheen */
 .service-card::before {
     content: "";
     position: absolute;
@@ -440,7 +424,6 @@ main {
     pointer-events: none;
 }
 
-/* Clean Top Accent Wipe */
 .service-card::after {
     content: "";
     position: absolute;
@@ -530,7 +513,6 @@ main {
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--blue-neon);
-    transition: color 0.3s var(--ease-pro);
 }
 
 .service-arrow {
@@ -554,9 +536,45 @@ main {
     color: #ffffff;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
+/* ABOUT SECTION */
+
+.about-section {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+
+.about-container {
+    padding: 2rem;
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(
+        120deg,
+        rgba(12, 17, 29, 0.85),
+        rgba(17, 24, 41, 0.55)
+    );
+    backdrop-filter: blur(16px);
+}
+
+.about-container h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+}
+
+.about-container p {
+    max-width: 780px;
+    font-size: 0.96rem;
+    color: var(--text-sub);
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
 .footer {
     position: relative;
     z-index: 2;
@@ -587,13 +605,12 @@ main {
     font-weight: 600;
 }
 
-/* =====================================
-   RESPONSIVE & MOTION PREFERENCES
-===================================== */
+/* RESPONSIVE */
+
 @media (max-width: 768px) {
     .brand-logo {
         height: 48px;
-        max-width: 92px;
+        max-width: 190px;
     }
 
     .hero {
@@ -611,16 +628,59 @@ main {
         gap: 0.5rem;
     }
 
+    .about-section {
+        padding: 0 1.25rem 3.5rem;
+    }
+
+    .about-container {
+        padding: 1.5rem;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
 }
 
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0.75rem 1rem;
+    }
+
+    .brand-logo {
+        height: 42px;
+        max-width: 160px;
+    }
+
+    .header-status {
+        font-size: 0.58rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .hero {
+        padding-top: 3.5rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.35rem, 10vw, 3.1rem);
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.6rem;
+    }
+}
+
+/* ACCESSIBILITY */
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
     *::after {
+        scroll-behavior: auto !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
