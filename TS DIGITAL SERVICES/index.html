@@ -1,218 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TS Digital Services | Official Digital Platform by Thallam Siddhu</title>
-
-    <meta name="description" content="Explore TS Digital Services, the official digital platform created by Thallam Siddhu. Discover Live Weather, Calculator Pro, Student Hub and more digital applications.">
-
-    <meta name="keywords" content="Thallam Siddhu, TS Digital, TS Digital Services, Thallam Siddhu Digital Services, Digital Applications, Live Weather, Calculator Pro, Student Hub">
-
-    <meta name="author" content="Thallam Siddhu">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-
-    <meta name="theme-color" content="#05070c">
-    <meta name="application-name" content="TS Digital Services">
-
-    <link rel="canonical" href="https://ts-digital-services.vercel.app/">
-
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="apple-touch-icon" href="logo.png">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="TS Digital Services | Thallam Siddhu">
-    <meta property="og:description" content="Explore digital applications and online services created by Thallam Siddhu.">
-    <meta property="og:url" content="https://ts-digital-services.vercel.app/">
-    <meta property="og:site_name" content="TS Digital Services">
-    <meta property="og:image" content="https://ts-digital-services.vercel.app/logo.png">
-    <meta property="og:image:alt" content="TS Digital Services official logo">
-
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TS Digital Services | Thallam Siddhu">
-    <meta name="twitter:description" content="Discover digital applications and online services by Thallam Siddhu.">
-    <meta name="twitter:image" content="https://ts-digital-services.vercel.app/logo.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Structured data for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Person",
-                "@id": "https://ts-digital-services.vercel.app/#creator",
-                "name": "Thallam Siddhu",
-                "url": "https://ts-digital-services.vercel.app/"
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://ts-digital-services.vercel.app/#website",
-                "url": "https://ts-digital-services.vercel.app/",
-                "name": "TS Digital Services",
-                "alternateName": [
-                    "TS Digital",
-                    "Thallam Siddhu Digital Services"
-                ],
-                "description": "Digital applications and online services created by Thallam Siddhu.",
-                "publisher": {
-                    "@id": "https://ts-digital-services.vercel.app/#creator"
-                },
-                "inLanguage": "en"
-            },
-            {
-                "@type": "Organization",
-                "@id": "https://ts-digital-services.vercel.app/#organization",
-                "name": "TS Digital Services",
-                "alternateName": "TS Digital",
-                "url": "https://ts-digital-services.vercel.app/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://ts-digital-services.vercel.app/logo.png"
-                },
-                "founder": {
-                    "@id": "https://ts-digital-services.vercel.app/#creator"
-                }
-            }
-        ]
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TS Digital Service | Thallam Siddhu</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <!-- Header: Top Left Corner Logo + Brand Text Immediately Right -->
+  <header class="navbar">
+    <div class="nav-top-left">
+      <a href="#" class="brand-link" title="TS Digital Service">
+        <img src="logo.png" alt="TS Digital Service Logo" class="top-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="logo-fallback" style="display: none;">TS</span>
+        <div class="brand-title">
+          <span class="brand-name">TS Digital Service</span>
+          <span class="brand-sub">by Thallam Siddhu</span>
+        </div>
+      </a>
+    </div>
+  </header>
 
-    <!-- AMBIENT BACKGROUND -->
-    <div class="bg-stage" aria-hidden="true">
-        <div class="bg-mesh"></div>
-        <div class="bg-grid"></div>
-        <div class="glow-beam beam-electric"></div>
-        <div class="glow-beam beam-chrome"></div>
+  <!-- Hero & Search Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="pill-badge">Unified Digital Portal</span>
+      <h1>Welcome to <span class="highlight">TS Digital Service</span></h1>
+      <p class="subtitle">
+        Quick access to live weather tracking, scientific calculations, and student portal services.
+      </p>
+
+      <!-- Compact Search Filter -->
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="service-search" placeholder="Filter services (Weather, Calculator, StudentHub)..." />
+      </div>
+    </div>
+  </section>
+
+  <!-- Compact Service Buttons Section -->
+  <main class="container services-section">
+    <div class="section-header">
+      <h2>Quick Services</h2>
+      <span id="service-count" class="count-badge">3 available</span>
     </div>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-container">
-
-            <a href="/" class="brand" id="brandHome" aria-label="TS Digital Services Home">
-                <img
-                    src="logo.png"
-                    alt="TS Digital Services logo by Thallam Siddhu"
-                    class="brand-logo"
-                    width="110"
-                    height="56"
-                >
-            </a>
-
-            <div class="header-right">
-                <span class="header-status">
-                    <span class="status-dot"></span>
-                    DIGITAL PLATFORM
-                </span>
-            </div>
-
+    <div class="services-grid" id="services-grid">
+      <!-- Service 1: Live Weather -->
+      <a href="https://smart-weather-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="service-btn" data-keywords="live weather forecast climate temperature gps siddhu">
+        <div class="btn-icon weather-bg">🌤️</div>
+        <div class="btn-info">
+          <div class="btn-title-row">
+            <h3>Live Weather</h3>
+            <span class="live-dot" title="Online"></span>
+          </div>
+          <p>Real-time GPS & 7-day forecast</p>
         </div>
-    </header>
+        <span class="btn-arrow">↗</span>
+      </a>
 
-    <!-- HOMEPAGE -->
-    <main id="homePage">
-
-        <section class="hero">
-            <div class="hero-content">
-
-                <div class="hero-label reveal-item" style="--delay: 0.04s;">
-                    <span class="hero-label-dot"></span>
-                    ONE PLATFORM. MULTIPLE SERVICES.
-                </div>
-
-                <h1 class="reveal-item" style="--delay: 0.12s;">
-                    <span>TS Digital Services</span>
-                </h1>
-
-                <p class="reveal-item" style="--delay: 0.2s;">
-                    Explore digital applications and useful online services
-                    created by Thallam Siddhu. Everything you need,
-                    all in one place.
-                </p>
-
-                <div class="hero-bottom reveal-item" style="--delay: 0.28s;">
-                    <span>Created by</span>
-                    <strong>Thallam Siddhu</strong>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section class="services-section" id="services">
-
-            <div class="section-heading reveal-item" style="--delay: 0.34s;">
-
-                <div>
-                    <span class="section-label">EXPLORE TS DIGITAL</span>
-                    <h2>Available Services</h2>
-                    <p>Choose a digital service to get started.</p>
-                </div>
-
-                <div class="service-count">
-                    <span id="serviceCount">03</span>
-                    <small>Services</small>
-                </div>
-
-            </div>
-
-            <div class="service-grid" id="serviceGrid">
-                <!-- Services generated by JavaScript -->
-            </div>
-
-        </section>
-
-        <!-- ABOUT -->
-        <section class="about-section">
-            <div class="about-container">
-                <span class="section-label">ABOUT TS DIGITAL</span>
-                <h2>Digital Services by Thallam Siddhu</h2>
-                <p>
-                    TS Digital Services is a central platform for discovering
-                    digital applications and online services developed by
-                    Thallam Siddhu. New applications and services will be
-                    added as the platform grows.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="footer-container">
-
-            <div class="footer-copy">
-                © <span id="currentYear"></span>
-                TS Digital Services. All rights reserved.
-            </div>
-
-            <span class="footer-credit">
-                Created by Thallam Siddhu
-            </span>
-
+      <!-- Service 2: Calculator Pro -->
+      <a href="https://calculatorproject-psi.vercel.app/" target="_blank" rel="noopener noreferrer" class="service-btn" data-keywords="calculator pro math scientific trig history">
+        <div class="btn-icon calc-bg">∑</div>
+        <div class="btn-info">
+          <div class="btn-title-row">
+            <h3>Calculator Pro</h3>
+            <span class="live-dot" title="Online"></span>
+          </div>
+          <p>Scientific functions & history</p>
         </div>
+        <span class="btn-arrow">↗</span>
+      </a>
 
-    </footer>
+      <!-- Service 3: StudentHub AP -->
+      <a href="https://student-hub-psi-self.vercel.app/" target="_blank" rel="noopener noreferrer" class="service-btn" data-keywords="student hub students ap exams results scholarships bus pass">
+        <div class="btn-icon student-bg">🎓</div>
+        <div class="btn-info">
+          <div class="btn-title-row">
+            <h3>StudentHub AP</h3>
+            <span class="live-dot" title="Online"></span>
+          </div>
+          <p>Exams, results & scholarships</p>
+        </div>
+        <span class="btn-arrow">↗</span>
+      </a>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Empty Search State -->
+    <div id="no-results" class="no-results hidden">
+      <p>No matching service found. Try another keyword.</p>
+    </div>
+  </main>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-left"><strong>TS Digital Service</strong> &bull; All essential utilities in one place.</p>
+      <p class="footer-right">Developed by <strong>Thallam Siddhu</strong> &copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
